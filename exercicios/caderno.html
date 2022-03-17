@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1.1rem;
+            line-height: 1.4rem;
+        }
+        
+        div{
+            padding: 10px;
+            border: 3px solid blue;
+            border-radius: 5px;
+            margin: 5px;  
+        }
+
+        span{
+            color: red;
+            font-weight: bolder;
+        }
+
+        .azul{
+            font-size: 1.1rem;
+            color: blue;
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    Exemplos de <span>eventos DOM</span> = onclick, onmouseout, etc... <br>
+
+<span class="azul">Eu havia aprendido como modicar um elemento html inserindo o <br> evento na proria tag.</span> <br>
+
+Ex:  &lt div  onmouseover="onOver(this)" onmouseout="onOut(this)" 
+ >click </div> <br>
+
+ &lt script &gt <br>
+    function onOver(elemento){ <br>
+        elemento.style.backgroundColor = "red" <br>
+    } <br>
+
+    function onOut(elemento){ <br>
+        elemento.style.backgroundColor = "cornflowerblue" <br>
+    } <br>
+    
+    &lt/script &gt <br> <hr>
+
+
+<span class="azul">nessa aula foi apresentado como alterar um conteúdo de uma tag  <br> sem precisar inserir um evento na mesma. </span><br>
+
+maneira 1: <br>
+
+&lt script &gt  <br>
+    function carregado(){ <br>
+        var t = document.getElementById("titulo") <br>
+        t.addEventListener ("click", mudarTitulo) <br>
+    } <br>
+
+    function mudarTexto(){ <br>
+        this.innerHTML = "ppp" <br>
+    }
+    &lt/script &gt <br>
+
+    &lt body onload="carregado()"> <br>
+    
+    &lt h1  id="titulo">Teste&lt/h1 &gt <br>
+
+    
+</body> <br>
+
+<span class="azul">obs: nesse caso o onload foi nessário porque a função estava <br> acima do objetivo referido por ela, no caso o h1</span> <br>
+
+
+
+
+maneira 2: <br>
+
+&lt script &gt <br>
+    function carregado(){ <br>
+        var t = document.getElementById("titulo") <br>
+
+        t.addEventListener("click", mudarTexto) <br>
+    } <br>
+
+    function mudarTexto(){ <br>
+        this.innerHTML = "ppp"  <br>
+    } <br>
+    &lt/script &gt <br>
+    &lt/head &gt <br>
+    &lt body  onload="carregado()"> <br>
+
+    &lt h1  id="titulo">Teste&lt/h1 &gt <br>
+
+
+    &lt/body &gt <br>
+    &lt/html &gt <br>
+
+<div>
+    <p>
+        <span>ATENÇÃO</span>: t.addEventListener("click", mudarTexto) == t.onclick = mudarTexto <br> <br>
+    
+        explicando: Quando usamos o evento <span>addEventListener</span> o evento que será usado como argumento no caso o "click", nao receberá o <span>on</span>, e nenhum outro evento como onmouseout e outro tb não receberiam.
+    </p>
+</div>
+
+
+
+</body>
+</html>
