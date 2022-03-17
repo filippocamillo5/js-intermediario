@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <style>
+        img{
+            width: 250px;
+            margin-bottom: 30px;
+        }
+
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: whitesmoke;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body >
+    <img src="D_NQ_NP_770290-MLA48097103953_112021-O.jpg" alt=""> <br>
+
+    <div onmouseenter="mouseEntrou(this)" onmouseout="mouseSaiu(this)" onclick="clicar(this)">click</div>
+
+    <p >Texto para teste</p>
+
+    <script>
+        function mouseEntrou(i){
+            i.style.backgroundColor = "red"
+        }
+
+        function mouseSaiu(i){
+            i.style.backgroundColor = "cornflowerblue"
+            i.style.color = "white"
+            i.style.padding = "10px"
+            
+        }
+
+        function clicar(i){
+            i.style.color = "black"
+            i.style.padding = "20px"
+        }
+
+    </script>
+
+</body>
+</html>

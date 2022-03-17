@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+
+        h1 {
+            color: blue;
+            
+        }
+
+        span{
+            color: red;
+            font-weight: bolder;
+        }
+
+        .obs{
+            color: blue;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>eventos DOM parte 2</h1>
+
+    1 - quando eu coloco um atributo de evento html, como por exemplo o onclick dentro de uma tag HTML, e atribruo à este  atibruto uma função, eu posso colocar o <span>(this)</span>, e não precisar identificar o elemento na função com um getElementsByTagName por exemplo. Entretanto eu devo escrever qqr letra ou palavra nos parênteses da função, para quando eu escrever o código JS eu poder identificar o elemento. <br>
+    EX: <br> <br>
+    let h1 = document.getElementsByTagName("h1")[0] <br>
+
+        h1.innerText = i.value <br>
+    } <br>
+
+    <p>Neste caso o esta função está se referindo ao código html abaixo</p>
+
+    &lth1&gt Clique em mim &lt/h1&gt <br>
+
+    &ltdiv onclick="hideH1()">Click &lt/div&gt <br>
+
+    &ltinput type="text" onchange="changeh1(this)"> <hr>
+
+    <span class="obs">obs:</span> se eu usar aspas duplas para insirir um código JS dentro de um atributo de evento, eu tenho que colocar <span>aspas simples</span> para especificar este código JS. <br> Ex: <br> &lth1 onclick = "console.log('h1 foi clicado')"><br>
+
+          
+        
+
+    
+
+    
+</body>
+</html>

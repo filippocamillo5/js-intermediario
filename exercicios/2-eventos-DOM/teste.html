@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: green;
+            color: white;
+            display: inline-block;
+            padding: 20px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Título</h1>
+
+    <div onclick="mudar1()">Clique aqui!</div>
+
+    <script>
+
+        function mudar1(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.style.display = "none"
+        }
+
+
+    </script>
+    
+</body>
+</html>
