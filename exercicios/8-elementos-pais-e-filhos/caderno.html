@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            line-height: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        h1, h2{
+            color: blue;
+        }
+
+        span{
+            
+            color: red;
+            font-weight: bold;
+        }
+
+        div{
+            padding: 7px;
+            border: 3px solid blue;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>addEventListener e target</h1>
+
+    
+        <H2>h1.addEventListener ("click", qualquerFuncao)</H2> 
+        
+        <P>isso serve para adicionar um evento, numa função no javaScript, sem ter que especificar o evento na tag HTML.o addEventListener sempre é precedido por uma variável, a qual será alvo no evento no caso o h1. </P>
+    
+
+    <P>
+        O "click", especifica qual é o evento, no caso o onclick. Porém quando usamo eventos no addEventListener sempre o colocamos entre aspas e sem o on.   </P>
+
+        <p>
+            qualquerFuncao, é pra criar a função que acontecerá o evento click, e o que ocorrerá depois do objeto, no caso o h1, ser clicado 
+        </p>
+
+        <hr>
+
+        function cor (e){ <br>
+            let t = e.target <br>
+            t.style.color = "red" <br>
+        } <br>
+
+
+        <h2>"e" e "target"</h2>
+        
+        <p>
+            o <span>(e)</span>, que poderia ser qualquer outra letra ou palavra, porém por convensão usamos a letra e, <span>faz referência ao evento DOM</span>, no caso o "click". Por isso, ele fica entre parêntes. 
+        </p>
+
+        <p>
+            <span>o target, refere-se a variável h1. Pois é a variável que precede o h1.addEventListener.</span> Logo usamos let = e.target para afirma que o elemento(h1), receberá o evento(e). E a partir de aí poder alterar o que for no caso a cor da tag quando ela for clicada.
+        </p>
+
+        <div>
+            window.onload = function(){ <br>
+                let h1 = document.getElementsByTagName("h1")[0] <br>
+                h1.addEventListener("click", cor) <br>
+            } <br> <br>
+            function cor (e){ <br>
+                let t = e.target <br>
+                t.style.color = "red" <br>
+            } <br>
+        </div>
+</body>
+</html>
