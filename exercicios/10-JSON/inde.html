@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = {
+            nome:"fulano",
+            idade: 20
+        }
+
+        let b = JSON.stringify(n)
+        let a = JSON.parse(b)
+
+        console.log(a)
+        console.log(b)
+
+        
+        let a2 = '{"nome":"fulado", "idade": 20}'
+
+        let b2 = JSON.parse(a2)
+
+        console.log(b2)
+
+    </script>
+    
+</body>
+</html>

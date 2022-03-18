@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+
+
+        h1, h2{
+            color: blue;
+            font-size: 1.5rem;
+        }
+
+        span{
+            
+            color: red;
+            font-weight: bold;
+        }
+
+        div{
+            padding: 7px;
+            border: 3px solid green;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON.parse</h1>
+
+    <p>transforma um objeto em string</p>
+
+    <h1>JSON.stringify</h1>
+
+    <p>transforma uma string num objeto</p>
+
+    <div>
+        Ex:let n = { <br>
+            nome:"fulano", <br>
+            idade: 20 <br>
+        } <br>
+
+        let b = JSON.stringify(n) <br>
+        let a = JSON.parse(b) <br>
+
+        console.log(a) <br>
+        console.log(b) <br>
+
+        
+        let a2 = '{"nome":"fulado", "idade": 20}' (Esta é forma que raramente será usada para transformar uma string num objeto, <span>atenção as aspas.</span>)<br>
+
+        let b2 = JSON.parse(a2) <br>
+
+        console.log(b2) <br>
+    </div>
+
+    
+</body>
+</html>
